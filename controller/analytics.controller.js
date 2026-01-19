@@ -16,7 +16,7 @@ exports.handleEvent = async (req, res) => {
 }
 
 exports.handlePage = async (req, res) => {
-    const { pageName, eventName } = req.body;
+    const { pageName, eventName, hostName } = req.body;
 
     try {
         const newEvent = new PageVisit({ pageName, eventName, hostName });
