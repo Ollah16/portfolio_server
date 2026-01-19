@@ -9,6 +9,10 @@ const pageSchema = new mongoose.Schema(
         eventName: {
             type: String,
             required: true,
+        },
+        hostName: {
+            type: String,
+            required: true,
         }
     },
 
