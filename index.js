@@ -2,7 +2,9 @@ require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
 
-const click = require("./routes/analytics.route")
+const click = require("./routes/analytics.route");
+const userData = require("./routes/user.route");
+
 const connectDb = require("./config/db")
 
 const app = express()
@@ -13,6 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/analytics", click)
+app.use("/user", userData)
 
 const PORT = process.env.PORT
 
